@@ -2,7 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Icon } from 'react-native-elements'
 
-export default function HeaderComponent(){
+
+export default function HeaderComponent({ title, navigation }){
     return(
         <View style={styles.header}>
             <Icon 
@@ -11,7 +12,7 @@ export default function HeaderComponent(){
                 onPress={() => { console.log('button pressed')}}
             />
             <View style={{flex: 2}}>
-                <Text style={styles.headerText}>Title</Text>
+                <Text style={styles.headerText}>{title}</Text>
             </View>
         </View>
     );
