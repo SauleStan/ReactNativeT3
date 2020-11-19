@@ -1,11 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import HeaderComponent from '../components/HeaderComponent';
 
 
-function HomeScreen() {
+function HomeScreen({ navigation }) {
     return (
         <View style={styles.container}>
-            <Text>Home Screen</Text>
+            <HeaderComponent title = "Ads" onPress={()=>navigation.openDrawer()}/>
+            <View style={styles.content}>
+                <Text>Home Screen</Text>
+            </View>
         </View>
     );
 }
@@ -17,6 +21,10 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
+        // backgroundColor: 'green',
     },
+    content: {
+        backgroundColor: 'pink',
+    }
 });

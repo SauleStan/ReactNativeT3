@@ -3,15 +3,16 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Icon } from 'react-native-elements'
 
 
-export default function HeaderComponent({ title, navigation }){
-    return(
+export default function HeaderComponent({ title, onPress }) {
+    return (
         <View style={styles.header}>
-            <Icon 
-                style={{flex:1}}
-                name='menu'
-                onPress={() => { console.log('button pressed')}}
-            />
-            <View style={{flex: 2}}>
+            <View style={styles.icon}>
+                <Icon
+                    name='menu'
+                    onPress={onPress}
+                />
+            </View>
+            <View style={{ flex: 2 }}>
                 <Text style={styles.headerText}>{title}</Text>
             </View>
         </View>
@@ -21,15 +22,20 @@ export default function HeaderComponent({ title, navigation }){
 const styles = StyleSheet.create({
     header: {
         width: '100%',
-        height: '100%',
+        height: 70,
+        paddingTop: 20,
         alignItems: 'center',
         display: 'flex',
         flexDirection: 'row',
+        // backgroundColor: 'coral',
     },
     headerText: {
         fontWeight: 'bold',
         fontSize: 20,
         letterSpacing: 1,
         textAlign: 'center'
+    },
+    icon: {
+        paddingLeft: 10,
     }
 })
