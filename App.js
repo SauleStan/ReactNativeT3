@@ -3,7 +3,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import HomeScreen from './lib/screens/HomeScreen';
-import { HeaderTitle } from '@react-navigation/stack';
 
 const Drawer = createDrawerNavigator();
 

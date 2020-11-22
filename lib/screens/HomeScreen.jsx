@@ -1,14 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import HeaderComponent from '../components/HeaderComponent';
 
+import HeaderComponent from '../components/HeaderComponent';
+import AdComponent from '../components/AdComponent';
 
 function HomeScreen({ navigation }) {
+
+    const onMenuButtonPressed = () => navigation.openDrawer();
+
     return (
         <View style={styles.container}>
-            <HeaderComponent title = "Ads" onPress={()=>navigation.openDrawer()}/>
+            <HeaderComponent title = "Ads" onPress={onMenuButtonPressed}/>
             <View style={styles.content}>
-                <Text>Home Screen</Text>
+                <AdComponent/>
             </View>
         </View>
     );
@@ -20,11 +24,12 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        alignItems: 'center',
+        // alignItems: 'center',
         justifyContent: 'flex-start',
         // backgroundColor: 'green',
     },
     content: {
         backgroundColor: 'pink',
+        alignItems: 'center'
     }
 });

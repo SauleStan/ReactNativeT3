@@ -28,6 +28,8 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         // backgroundColor: 'coral',
+        elevation: 2,
+        // borderWidth: 1,
     },
     headerText: {
         fontWeight: 'bold',
