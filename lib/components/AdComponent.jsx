@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function AdComponent () {
-    return(
+export default function AdComponent() {
+    return (
         <View style={styles.adContainer}>
             {/* Title */}
             <View style={styles.adTextArea}>
@@ -53,6 +53,6 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         width: "90%"
     }
-    
+
 
 })

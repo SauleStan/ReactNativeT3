@@ -2,15 +2,15 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import HeaderComponent from '../components/HeaderComponent';
-import AdComponent from '../components/AdComponent';
+import NewAd from '../components/NewAd';
 
-export default function HomeScreen({ navigation }) {
+export default function NewAdScreen({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <HeaderComponent title="Ads" onPress={() => navigation.openDrawer()} />
+            <HeaderComponent title="New Ad" onPress={() => navigation.openDrawer()} />
             <View style={styles.content}>
-                <AdComponent />
+                <NewAd />
             </View>
         </View>
     );
